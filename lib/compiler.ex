@@ -6,13 +6,14 @@ defmodule Compiler do
     #   if (String.length(i) != 0) do i end
     # end)
     valid =
-      with {:ok, data} <- data = syntax(data),
+      with {:ok, _voided} <- ^data = syntax(data),
       do: {:ok}
     case valid do
       {:ok} -> {:ok}
       {:error, reason} -> {:error, reason}
     end
     IO.puts "WORKED:\n"
+    IO.puts data
     {:ok}
   end
 
