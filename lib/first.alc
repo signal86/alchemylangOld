@@ -4,7 +4,6 @@
 // `#` is for preprocessor, like in C
 // Default unconfigurable settings: charset, viewport, author
 // Default configurable settings: page title, search tags
-// Default page title: Alchemy {ver}
 
 // only preprocessors can be used outside of architecture blocks
 #import "tailwindcss"
@@ -29,8 +28,19 @@ meta { // architecture block
     // page settings configured like below
     // Reserved keywords dont activate in page settings
     // You cannot define page settings they're only defined in the compiler
-    page_title: [text: "", signal: true, signal_period: ] // Research js signals (AUTO UPDATE)
+    // These can be expanded outward like python where there's newlines inside the array
+    page_title: [text: "", signal: true, signal_period: 5] // Research js signals (AUTO UPDATE)
+        /*
+        Default settings for page_title:
+        text: "Alchemy {ver}",
+        signal: false,
+        signal_period: 30
+        */
     search_tags: ["alchemy language", "", ""] // No extra settings, just list of search tags. alchemy and alchemylang are all automatically added to search tags
+        /*
+        Default settings for search_tags:
+        "alchemy language", "alchemy", "alchemylang"
+        */
 }
 
 view { // architecture block
