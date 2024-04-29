@@ -22,7 +22,6 @@ defmodule Alchemylang do
         {:ok} -> IO.puts "compilation successful"
         {:error, reason} -> IO.puts "build failed -> " |> Kernel.<>(reason)
       end
-      Compiler.compile(fileName)
     else
       IO.puts "file not found"
     end

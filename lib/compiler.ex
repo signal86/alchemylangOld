@@ -6,12 +6,14 @@ defmodule Compiler do
     #   if (String.length(i) != 0) do i end
     # end)
     valid =
-      with {:ok} <- data = syntax(data),
+      with {:ok, data} <- data = syntax(data),
       do: {:ok}
     case valid do
       {:ok} -> {:ok}
       {:error, reason} -> {:error, reason}
     end
+    IO.puts "WORKED:\n"
+    {:ok}
   end
 
   defp syntax(data) do
@@ -19,10 +21,11 @@ defmodule Compiler do
     # {:error, reason}
     try do
       data = Enum.map(data, fn i ->
-        reason = "test"
-        throw({:error, reason})
+        i
+        # reason = "test"
+        # throw({:error, reason})
       end)
-      data
+      {:ok, data}
     catch
       {:error, reason} -> {:error, reason}
     end
