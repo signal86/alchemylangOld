@@ -14,8 +14,8 @@ defmodule Alchemylang do
   """
   def run(fileName) do
     if File.exists?(fileName) do
-      # Compiler.compile("tes")
       IO.puts "file found"
+      Compiler.compile(fileName)
     else
       IO.puts "file not found"
     end
