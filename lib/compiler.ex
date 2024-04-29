@@ -6,7 +6,7 @@ defmodule Compiler do
     #   if (String.length(i) != 0) do i end
     # end)
     valid =
-      with {:ok, _voided} <- ^data = syntax(data),
+      with {:ok, _voided} <- ^data = remap(syntax(data)), # TUPLE NOT ENUMERABLE!!!!
       do: {:ok}
     case valid do
       {:ok} -> {:ok}
@@ -15,6 +15,11 @@ defmodule Compiler do
     IO.puts "WORKED:\n"
     IO.puts data
     {:ok}
+  end
+
+  # TODO: remap fn remap to properly enumerate tuple (Enum.map not enumerable over tuple)
+  defp remap(dataMap) do
+    Enum.map(dataMap, fn {_atom, val} -> val end)
   end
 
   defp syntax(data) do
