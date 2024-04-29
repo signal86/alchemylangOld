@@ -1,0 +1,39 @@
+// Standards: snake case
+
+// New line counts as a new expression instead of semicolon
+// `#` is for preprocessor, like in C
+// Default unconfigurable settings: charset, viewport, author
+// Default configurable settings: page title, search tags
+// Default page title: Alchemy {ver}
+
+// only preprocessors can be used outside of architecture blocks
+#import "tailwindcss"
+
+// Comments
+/* multi-lines */
+
+// Escape characters: n, \, ", ', {, },
+// " == '
+
+// Reserved keywords: global, var, const, signal, meta, view
+// Formatted strings {}
+
+
+meta { // architecture block
+    // Variables, dynamic
+    // Remember parentheses on variable definition
+    global var a // can be uninitialized
+    global const b = 1 // MUST BE INITIALIZED
+    var c
+    const d = 2
+    // page settings configured like below
+    // Reserved keywords dont activate in page settings
+    // You cannot define page settings they're only defined in the compiler
+    page_title: [text: "", signal: true, signal_period: ] // Research js signals (AUTO UPDATE)
+    search_tags: ["alchemy language", "", ""] // No extra settings, just list of search tags. alchemy and alchemylang are all automatically added to search tags
+}
+
+view { // architecture block
+    a = 1;
+    // Rendering an array
+}

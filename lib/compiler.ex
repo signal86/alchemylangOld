@@ -7,6 +7,8 @@ defmodule Compiler do
     # end)
     valid =
       with {:ok, data} <- data = syntax(data),
+      # preprocessor
+      # rest
       do: {:ok}
     case valid do
       {:ok} -> {:ok}
