@@ -8,6 +8,7 @@
 // only preprocessors can be used outside of architecture blocks
 #import "tailwindcss"
 
+
 // Comments
 /* multi-lines */
 
@@ -15,7 +16,7 @@
 // " == '
 
 // Reserved keywords: global, var, const, signal, meta, view
-// Formatted strings {}
+// Formatted strings: {}
 
 
 meta { // architecture block
@@ -32,9 +33,7 @@ meta { // architecture block
     page_title: [text: "", signal: true, signal_period: 5] // Research js signals (AUTO UPDATE)
         /*
         Default settings for page_title:
-        text: "Alchemy {ver}",
-        signal: false,
-        signal_period: 30
+        text: "Alchemy {ver}"
         */
     search_tags: ["alchemy language", "", ""] // No extra settings, just list of search tags. alchemy and alchemylang are all automatically added to search tags
         /*
@@ -46,4 +45,8 @@ meta { // architecture block
 view { // architecture block
     a = 1;
     // Rendering an array
+}
+
+components { // architecture block
+
 }
