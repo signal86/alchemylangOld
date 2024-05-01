@@ -67,5 +67,5 @@ TODO: this
 
 # Errors
 &emsp;A **syntax error** occurs when a user's code does not follow the syntactical rules of Alchemy, such as typing ```creat text``` (instead of ```create text```), which would cause the compiler to respond with:
-```Syntax error on main.alc:1 -> "creat text" -> symbol not found```
+```build failed -> syntax error on main.alc:1 -> "creat text" -> symbol not found```
 &emsp;A **origin error** occurs when a user runs a piece of code that is missing its predecessor. This can include [ TODO: ADD EXAMPLE HERE, original idea has basis on having a redirection tag and disabling underline, but underline would be available without that so the example is invalid. ]

@@ -14,9 +14,7 @@ defmodule Compiler do
       {:ok} -> {:ok}
       {:error, reason} -> {:error, reason}
     end
-    IO.puts "WORKED:\n"
-    IO.puts data
-    {:ok}
+    # Enum.map(data, fn i -> IO.puts i end)
   end
 
   defp syntax(data) do
@@ -26,7 +24,7 @@ defmodule Compiler do
       data = Enum.map(data, fn i ->
         i
         # reason = "test"
-        # throw({:error, reason})
+        throw({:error, "syntax error line 2"})
       end)
       {:ok, data}
     catch
