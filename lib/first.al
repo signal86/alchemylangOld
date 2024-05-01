@@ -46,5 +46,8 @@ meta { // architecture block
 
 view { // architecture block
     a = 1; // Changes the value of the a tag
-
+    // Example for text variable. view /README.md
+    create text: b = foobar
+    b.redirect_to https://google.com
+    underline false
 }

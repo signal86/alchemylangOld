@@ -1,23 +1,28 @@
 # alchemylang
 a unique language framework for designing static webpages with minimal clutter, written in Elixir
+TODO: move all of this to docs and a tutorial page within said docs
 
 
 # Command Line Interface
 &emsp;Alchemy provides a CLI for auto generating code and project data (inspired by scaffolding in the Ruby on Rails framework)
 
 
-# Standards: Recommended filetypes
-Alchemy does not require filetypes, but heavily encourages them for maintainability, similar to C++'s '.h'
+# Filetypes
+&emsp;Alchemy does not require filetypes, but encourages the use of **.alc**.
+&emsp;To build a web page, a minimum of two files are required, which can be generated easiest through the CLI.
 
-**.alb** - Alchemy Build File
-Project build files, which define the routing to *.al* files and the inclusion of *.alc* files.
+**Alchemy Build Files**
+An alchemy build file contains the project structure and outline, along with the project's imports and plugins.
 
-**.al** - Alchemy Page File
-Defines the structure of a page, the 'meta' and 'view' of an Alchemy project.
+**Alchemy Page File**
+Defines the structure of an individual page, the 'meta' and 'view' of an Alchemy project.
 
-**.alc** - Alchemy Component File
+**Alchemy Component File**
 Defines components that are included in the alchemy project.
 TODO: component scripting should be in alchemy, instead of javascript
+
+**Alchemy Plugin File**
+TODO: this
 
 
 # Components
@@ -32,7 +37,7 @@ TODO: component scripting should be in alchemy, instead of javascript
     <strong>Text</strong><br>
     Aliases: text, p, paragraph<br>
     <em>Renders text on the screen</em><br>
-    Unique Modifier Functions: underline, italicized, bold, font, size<br><br>
+    Unique Modifier Functions: underline, italicized, bold, font, size, color<br><br>
 </details><br>
 &emsp;The components in Alchemy can be created as a <em>static component</em>, which allows only short term modification of the component by using option functions without including a modifier function, causing the modification to apply to only the most recent component. Alternatively, the component can be created as a <em>dynamic component</em>, which allows for the modification at any point while the page is rendered.<br>
 &emsp;Components can only be created in a <em>view</em> architecture block. To create a component, the following code may be of help:<br>
