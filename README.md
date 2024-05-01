@@ -14,6 +14,9 @@ TODO: move all of this to docs and a tutorial page within said docs
 **Alchemy Build Files**
 An alchemy build file contains the project structure and outline, along with the project's imports and plugins.
 
+**Alchemy Page Layout File**
+A page file which is applied globally across all the pages.
+
 **Alchemy Page File**
 Defines the structure of an individual page, the 'meta' and 'view' of an Alchemy project.
 
