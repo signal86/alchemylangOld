@@ -1,9 +1,9 @@
 # alchemylang
-an unique language framework for designing static webpages with minimal clutter, written in Elixir
+a unique language framework for designing static webpages with minimal clutter, written in Elixir
 
 
 # Command Line Interface
-Alchemy provides a CLI for auto generating code and project data (inspired by scaffolding in the Ruby on Rails framework)
+&emsp;Alchemy provides a CLI for auto generating code and project data (inspired by scaffolding in the Ruby on Rails framework)
 
 
 # Standards: Recommended filetypes
@@ -17,9 +17,48 @@ Defines the structure of a page, the 'meta' and 'view' of an Alchemy project.
 
 **.alc** - Alchemy Component File
 Defines components that are included in the alchemy project.
+TODO: component scripting should be in alchemy, instead of javascript
 
 
 # Components
-Alchemy provides a base of components which has a constantly expanding base library based on the standard HTML architecture.
-**Component Name**
-*
+&emsp;Alchemy provides a base of components which has a constantly expanding base library based on the standard HTML5 architecture.
+<details>
+    <summary>Standard library of components</summary>
+    <br>
+    <strong>Component Name</strong><br>
+    Aliases: compname, compname2<br>
+    <em>Elevator pitch</em><br>
+    Modifier Functions: href, etc<br><br>
+    <strong>Text</strong><br>
+    Aliases: text, p, paragraph<br>
+    <em>Renders text on the screen</em><br>
+    Modifier Functions: underline, italicized, bold, font, size<br><br>
+</details><br>
+<details>
+    <summary>Standard library of modifier functions</summary>
+    <br>
+    <strong>Modifier Function Name</strong><br>
+    <em>Elevator pitch</em><br>
+    Example<br><br>
+    <strong>redirect_to</strong><br>
+    <em>Redirects on click to a specified URL</em><br>
+    redirect_to https://google.com<br><br>
+</details><br>
+&emsp;The components in Alchemy can be created as a <em>static component</em>, which allows only short term modification of the component by using option functions without including a modifier function, causing the modification to apply to only the most recent component. Alternatively, the component can be created as a <em>dynamic component</em>, which allows for the modification at any point while the page is rendered.<br>
+&emsp;Components can only be created in a <em>view</em> architecture block. To create a component, the following code may be of help:<br>
+<code>&thinsp;create text // Creates a static text component<br>
+&thinsp;create text: variableNameHere // Creates a dynamic text component modifiable in the future as variableNameHere</code><br>
+&emsp;To modify a component, a <strong>modifier function</strong> can be used.<br>
+<code>create text = Take me to Google!<br>
+&thinsp;redirect_to https://google.com<br>
+&thinsp;underline false</code><br>
+&emsp;or:<br>
+<code>create text: a = Take me to Google!<br>
+&thinsp;a.redirect_to https://google.com<br>
+&thinsp;a.underline false</code><br>
+
+
+# Errors
+&emsp;A **syntax error** occurs when a user's code does not follow the syntactical rules of Alchemy, such as typing ```creat text``` (instead of ```create text```), which would cause the compiler to respond with:
+```Syntax error on main.alc:1 -> "creat text" -> symbol not found```
+&emsp;A **origin error** occurs when a user runs a piece of code that is missing its predecessor. This can include [ TODO: ADD EXAMPLE HERE, original idea has basis on having a redirection tag and disabling underline, but underline would be available without that so the example is invalid. ]

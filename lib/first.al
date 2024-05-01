@@ -15,38 +15,36 @@
 // Escape characters: n, \, ", ', {, },
 // " == '
 
-// Reserved keywords: global, var, const, signal, meta, view
+// Reserved keywords: global, var, const, signal, meta, view, create
 // Formatted strings: {}
 
 
 meta { // architecture block
+    // Sends a ""
     // Variables, dynamic
     // Remember parentheses on variable definition
     global var a // can be uninitialized
-    global const b = 1 // MUST BE INITIALIZED
+    global const b = 1 // MUST BE INITIALIZED DUE TO CONST
     var c
     const d = 2
     // page settings configured like below
     // Reserved keywords dont activate in page settings
     // You cannot define page settings they're only defined in the compiler
     // These can be expanded outward like python where there's newlines inside the array
-    page_title: [text: "", signal: true, signal_period: 5] // Research js signals (AUTO UPDATE)
+    page_title: [text: "", signal_period: 5] // Page title is always a signal variable
         /*
         Default settings for page_title:
-        text: "Alchemy {ver}"
+        text: "Alchemy {ver}",
+        signal_period: 5    // Manages how often the page title should check for changes to variables
         */
-    search_tags: ["alchemy language", "", ""] // No extra settings, just list of search tags. alchemy and alchemylang are all automatically added to search tags
+    search_tags: ["foo", "bar"] // No extra settings, just list of search tags. "alchemy" and "language" are all automatically added to search tags
         /*
-        Default settings for search_tags:
-        "alchemy language", "alchemy", "alchemylang"
+        Default values in search_tags:
+        "alchemy", "language",
         */
 }
 
 view { // architecture block
-    a = 1;
-    // Rendering an array
-}
-
-components { // architecture block
+    a = 1; // Changes the value of the a tag
 
 }
