@@ -1,7 +1,9 @@
 # alchemylang
-a transpiled language for designing static webpages with minimal clutter
+an unique language framework for designing static webpages with minimal clutter, written in Elixir
 
-single files contain javascript, html, and any imports like *tailwindcss*
+
+# Command Line Interface
+Alchemy provides a CLI for auto generating code and project data (inspired by scaffolding in the Ruby on Rails framework)
 
 
 # Standards: Recommended filetypes
@@ -15,3 +17,9 @@ Defines the structure of a page, the 'meta' and 'view' of an Alchemy project.
 
 **.alc** - Alchemy Component File
 Defines components that are included in the alchemy project.
+
+
+# Components
+Alchemy provides a base of components, 
+**Component Name**
+*
