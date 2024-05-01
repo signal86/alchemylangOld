@@ -50,4 +50,5 @@ view { // architecture block
     create text: b = foobar
     b.redirect_to https://google.com
     b.underline false
+    // <p><a href="https://google.com">foobar</a></p> + no underline
 }

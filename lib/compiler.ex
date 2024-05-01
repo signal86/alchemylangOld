@@ -24,7 +24,7 @@ defmodule Compiler do
       data = Enum.map(data, fn i ->
         i
         # reason = "test"
-        throw({:error, "syntax error line 2"})
+        # throw({:error, "syntax error on main.alc:1 -> \"creat text\" -> symbol not found"})
       end)
       {:ok, data}
     catch
