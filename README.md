@@ -28,21 +28,11 @@ TODO: component scripting should be in alchemy, instead of javascript
     <strong>Component Name</strong><br>
     Aliases: compname, compname2<br>
     <em>Elevator pitch</em><br>
-    Modifier Functions: href, etc<br><br>
+    Unique Modifier Functions: href, etc<br><br>
     <strong>Text</strong><br>
     Aliases: text, p, paragraph<br>
     <em>Renders text on the screen</em><br>
-    Modifier Functions: underline, italicized, bold, font, size<br><br>
-</details><br>
-<details>
-    <summary>Standard library of modifier functions</summary>
-    <br>
-    <strong>Modifier Function Name</strong><br>
-    <em>Elevator pitch</em><br>
-    Example<br><br>
-    <strong>redirect_to</strong><br>
-    <em>Redirects on click to a specified URL</em><br>
-    redirect_to https://google.com<br><br>
+    Unique Modifier Functions: underline, italicized, bold, font, size<br><br>
 </details><br>
 &emsp;The components in Alchemy can be created as a <em>static component</em>, which allows only short term modification of the component by using option functions without including a modifier function, causing the modification to apply to only the most recent component. Alternatively, the component can be created as a <em>dynamic component</em>, which allows for the modification at any point while the page is rendered.<br>
 &emsp;Components can only be created in a <em>view</em> architecture block. To create a component, the following code may be of help:<br>
@@ -56,6 +46,18 @@ TODO: component scripting should be in alchemy, instead of javascript
 <code>create text: a = Take me to Google!<br>
 &thinsp;a.redirect_to https://google.com<br>
 &thinsp;a.underline false</code><br>
+&emsp;Modifier functions are parsed by their arguments, for example <code>false</code> being the first argument for <code>a.underline false</code>. Some arguments may be longer than one word, but in general it should be expected to be one word.<br>
+&emsp;A <strong>unique modifier function</strong> is a modifier function that is used by one component specifically (or by multiple, but with different workings each time). This can include something like <code>font</code>, which would throw a syntax error if used on something like an image.
+<details>
+    <summary>Standard library of modifier functions (No uniques)</summary>
+    <br>
+    <strong>Modifier Function Name</strong><br>
+    <em>Elevator pitch</em><br>
+    Example<br><br>
+    <strong>redirect_to</strong><br>
+    <em>Redirects on click to a specified URL</em><br>
+    redirect_to https://google.com<br><br>
+</details><br>
 
 
 # Errors
