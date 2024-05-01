@@ -55,7 +55,7 @@ TODO: this
 &thinsp;a.redirect_to https://google.com<br>
 &thinsp;a.underline false</code><br>
 &emsp;Modifier functions are parsed by their arguments, for example <code>false</code> being the first argument for <code>a.underline false</code>. Some arguments may be longer than one word, but in general it should be expected to be one word.<br>
-&emsp;A <strong>unique modifier function</strong> is a modifier function that is used by one component specifically (or by multiple, but with different workings each time). This can include something like <code>font</code>, which would throw a syntax error if used on something like an image.
+&emsp;A <strong>unique modifier function</strong> is a modifier function that is used by one component specifically (or by multiple, but with different workings each time). This can include something like <code>font</code>, which would throw a syntax error if used on something like an image.<br>
 <details>
     <summary>Standard library of modifier functions (No uniques)</summary>
     <br>
@@ -65,7 +65,7 @@ TODO: this
     <strong>redirect_to</strong><br>
     <em>Redirects on click to a specified URL</em><br>
     redirect_to https://google.com<br><br>
-</details><br>
+</details>
 
 
 # Errors
