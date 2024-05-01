@@ -20,6 +20,6 @@ Defines components that are included in the alchemy project.
 
 
 # Components
-Alchemy provides a base of components, 
+Alchemy provides a base of components which has a constantly expanding base library based on the standard HTML architecture.
 **Component Name**
 *
