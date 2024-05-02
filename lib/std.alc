@@ -1,1 +1,6 @@
 // Component file
+components {
+    create text replicating // replicating makes it emulate standard alchemy language
+        
+    end
+}
