@@ -1,4 +1,4 @@
-on: listener
+on attaches a listener defined by unique component functions
 
 # alchemylang
 a unique language framework for designing static webpages with minimal clutter, written in Elixir
@@ -74,3 +74,10 @@ TODO: this
 &emsp;A **syntax error** occurs when a user's code does not follow the syntactical rules of Alchemy, such as typing ```creat text``` (instead of ```create text```), which would cause the compiler to respond with:
 ```build failed -> syntax error on main.alc:1 -> "creat text" -> symbol not found```
 &emsp;A **origin error** occurs when a user runs a piece of code that is missing its predecessor. This can include [ TODO: ADD EXAMPLE HERE, original idea has basis on having a redirection tag and disabling underline, but underline would be available without that so the example is invalid. ]
+
+
+# Warnings
+warnings for:
+components in same file as meta or views, vice versa
+useless declaration (setting a variable name for something that doesnt really need it)
+useless modifier (ex: underline false after underline true)
