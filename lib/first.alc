@@ -15,7 +15,7 @@
 // Escape characters: n, \, ", ', {, },
 // " == '
 
-// Reserved keywords: global, var, const, signal, meta, view, create, render
+// Reserved keywords: global, var, const, signal, meta, view, create, redirect, on
 // Formatted strings: {}
 
 
@@ -45,9 +45,9 @@ meta { // architecture block
 }
 
 view { // architecture block
-    a = 1; // Changes the value of the a tag
+    a = 1 // Changes the value of the a tag
     // Example for dynamic text variable. view /README.md
-    create text: b = foobar
+    create text: b = foo is {a}, bar is not {a}
     b.redirect_to https://google.com
     b.underline false
     // <p><a href="https://google.com">foobar</a></p> + no underline
