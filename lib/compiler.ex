@@ -6,7 +6,7 @@ defmodule Compiler do
     #   if (String.length(i) != 0) do i end
     # end)
     valid =
-      with {:ok, data} <- data = syntax(data),
+      with {:ok, data} <- data = tokenizer(data),
       # preprocessor
       # rest
       do: {:ok}
@@ -17,7 +17,7 @@ defmodule Compiler do
     # Enum.map(data, fn i -> IO.puts i end)
   end
 
-  defp syntax(data) do
+  defp tokenizer(data) do
     # reason = "lol"
     # {:error, reason}
     try do

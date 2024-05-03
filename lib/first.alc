@@ -42,13 +42,18 @@ meta { // architecture block
         Default values in search_tags:
         "alchemy", "language",
         */
+    page_background: [color, white] // Background of the page
+        /*
+        First parameter: type -> color, url
+        Second parameter: value -> CSS color or URL for both values
+        */
 }
 
 view { // architecture block
     a = 1 // Changes the value of the a tag
     // Example for dynamic text variable. view /README.md
-    create text: b = foo is {a}, bar is not {a}
-    b.redirect_to https://google.com
-    b.underline false
+    create text = foo is {a}, bar is not {a}
+    redirect_to https://google.com
+    underline false
     // <p><a href="https://google.com">foo is 1, bar is not 1</a></p> + no underline
 }

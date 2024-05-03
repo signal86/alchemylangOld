@@ -1,4 +1,7 @@
-on attaches a listener defined by unique component functions
+mainOpt required in components
+on attaches a listener defined by unique component functions -- REQUIRES DECLARED VARIABLE FOR IDING
+listener and compilation required in component modifier definition
+require jQuery
 
 # alchemylang
 a unique language framework for designing static webpages with minimal clutter, written in Elixir
@@ -81,3 +84,4 @@ warnings for:
 components in same file as meta or views, vice versa
 useless declaration (setting a variable name for something that doesnt really need it)
 useless modifier (ex: underline false after underline true)
+unused variables
