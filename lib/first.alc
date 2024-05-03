@@ -15,7 +15,7 @@
 // Escape characters: n, \, ", ', {, },
 // " == '
 
-// Reserved keywords: global, var, const, signal, meta, view, create, redirect, on
+// Reserved keywords: global, var, const, signal, meta, view, create, redirect, on, end, if
 // Formatted strings: {}
 
 

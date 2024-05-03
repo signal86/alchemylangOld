@@ -6,7 +6,7 @@ defmodule Compiler do
     #   if (String.length(i) != 0) do i end
     # end)
     valid =
-      with {:ok, data} <- data = tokenizer(data),
+      with {:ok, data} <- data = lexer(data),
       # preprocessor
       # rest
       do: {:ok}
@@ -17,14 +17,18 @@ defmodule Compiler do
     # Enum.map(data, fn i -> IO.puts i end)
   end
 
-  defp tokenizer(data) do
+  defp lexer(data) do
     # reason = "lol"
     # {:error, reason}
     try do
-      data = Enum.map(data, fn i ->
-        i
+      newData = []
+      lineNum = 1
+      data = Enum.map(data, fn line ->
+        a = String.split(line, "")
+        newData
         # reason = "test"
         # throw({:error, "syntax error on main.alc:1 -> \"creat text\" -> symbol not found"})
+        lineNum = lineNum + 1
       end)
       {:ok, data}
     catch
