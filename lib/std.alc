@@ -32,8 +32,8 @@ components {
     end
 }
 
-modifiers { // for global modifiers
-    redirect_to <route>
+global_modifiers { // for global modifiers
+    create redirect_to = route // route as a parameter
         compilation // element html content being set to "original"
             <a href="{route}">{original}</a>
         end
