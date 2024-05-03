@@ -9,9 +9,9 @@ components {
             underline <arg1>
                 compilation // fires on compilation, with the actual element content being set to "original", view example in redirect_to modifier
                     if arg1 == true
-                        mainOpt >> text-decoration: underline;
+                        mainOpt += text-decoration: underline;
                     elif arg1 == false
-                        mainOpt >> text-decoration: none;
+                        mainOpt += text-decoration: none;
                     end
                 end
                 listeners // fires with "on"s, element id is immediately set to "ID" variable
@@ -24,7 +24,7 @@ components {
                             document.getElementById("{ID}").style.text-decoration = "underline";
                         end
                     else
-                        warnFor >> improper usage of underline modifier
+                        warnFor improper usage of underline modifier
                     end
                 end
             end
